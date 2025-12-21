@@ -16,12 +16,15 @@
 
 <body>
 
-<header>
-    <h2>Welcome, <span id="userName"></span></h2>
-    <h2>Job Recommendations</h2>
+<header class="dashboard-header">
+  <h2>Job Recommender</h2>
+
+  <div class="header-actions">
     <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-    <button class="btn logout" onclick="logout()">Logout</button>
+    <button class="logout" onclick="logout()">Logout</button>
+  </div>
 </header>
+
 
 <section class="skills-box">
     <textarea id="skills" placeholder="Enter your skills (e.g. python sql ml)"></textarea>
