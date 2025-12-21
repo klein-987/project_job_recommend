@@ -22,7 +22,6 @@ The goal was not just model accuracy, but **end-to-end system design**:
 - 📊 Explainable recommendations (matched skills + similarity score)
 - 💾 SQL database for users and jobs
 - 🌐 RESTful API backend
-- 📱 Mobile-responsive frontend
 - ☁️ Fully deployed (Frontend + Backend)
 
 ## 🧠 Machine Learning Approach
@@ -51,21 +50,21 @@ Content-based recommendation using **text similarity**
 
 ## 🏗️ System Architecture
 
-Frontend (HTML/CSS/JS)
-|
-| REST API
-v
-Backend (Flask + Gunicorn)
-|
-v
-SQLite Database
-|
-v
-ML Recommender (TF-IDF + Cosine Similarity)
+Frontend (HTML/CSS/JS)   
+|           
+| REST API     
+v    
+Backend (Flask + Gunicorn)  
+|   
+v   
+SQLite Database    
+|      
+v     
+ML Recommender (TF-IDF + Cosine Similarity)    
+   
+## 🛠️ Tech Stack   
 
-## 🛠️ Tech Stack
-
-### Languages
+### Languages  
 - Python
 - JavaScript
 
@@ -91,27 +90,93 @@ ML Recommender (TF-IDF + Cosine Similarity)
 
 ## 📂 Project Structure
 
-Job_Recommender/
-├── backend/
-│ ├── app.py
-│ ├── db.py
-│ ├── recommender.py
-│ └── database.db
-├── data/
-│ └── jobs.csv
-├── docs/ # Frontend (GitHub Pages)
-│ ├── index.html
-│ ├── dashboard.html
-│ ├── style.css
-│ ├── script.js
-│ └── img.png
-├── requirements.txt
-└── README.md
+Job_Recommender/    
+├── backend/  
+│ ├── app.py    
+│ ├── db.py          
+│ ├── recommender.py   
+│ └── database.db   
+├── data/        
+│ └── jobs.csv                         
+├── docs/ # Frontend (GitHub Pages)    
+│ ├── index.html      
+│ ├── dashboard.html      
+│ ├── style.css     
+│ ├── script.js      
+│ └── img.png         
+├── requirements.txt     
+└── README.md    
 
-👨‍💻 Author
-Neppali Puneeth Kumar
-B.Tech CSE, IIITDM Kancheepuram (2024–2028)
-🔗**LinkedIn**: https://www.linkedin.com/in/neppali-puneeth-kumar-824170327/
+⚙️ Local Setup
+
+Follow these steps to run the project locally.
+
+1️⃣ Clone the repository
+git clone https://github.com/N-Puneeth/Job_Recommender.git
+cd Job_Recommender
+
+2️⃣ Create and activate a virtual environment
+python -m venv venv
+
+
+Windows
+
+venv\Scripts\activate
+
+
+Linux / macOS
+
+source venv/bin/activate
+
+3️⃣ Install dependencies
+pip install -r requirements.txt
+
+4️⃣ Run the backend server
+python backend/app.py
+
+
+The backend will be available at:
+
+http://127.0.0.1:5000
+
+5️⃣ Run the frontend
+
+Open the following file directly in your browser:
+
+docs/index.html
+
+📈 Future Improvements
+
+JWT-based authentication
+
+Role and location-based job filtering
+
+Advanced NLP models (Word2Vec / BERT)
+
+Pagination and caching
+
+Migration to a production-grade database (PostgreSQL)
+
+🎯 Key Learnings
+
+End-to-end machine learning system design
+
+NLP-based similarity matching using TF-IDF and cosine similarity
+
+RESTful API development with Flask
+
+SQL schema design and database integration
+
+Debugging real-world deployment issues
+
+Differences between local and production environments
+
+Constraints of static frontend hosting (GitHub Pages)
+
+## 👨‍💻 Author                     
+  Neppali Puneeth Kumar                       
+  B.Tech CSE, IIITDM Kancheepuram (2024–2028)   
+  🔗**LinkedIn**: https://www.linkedin.com/in/neppali-puneeth-kumar-824170327/
 
 
 
