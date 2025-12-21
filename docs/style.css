@@ -8,16 +8,12 @@
 
 body {
   min-height: 100vh;
-  background: 
-    linear-gradient(
-      rgba(15, 32, 39, 0.75),
-      rgba(15, 32, 39, 0.75)
-    ),
+  background:
+    linear-gradient(rgba(15, 32, 39, 0.75), rgba(15, 32, 39, 0.75)),
     url("img.png") no-repeat center center;
   background-size: cover;
   color: #333;
 }
-
 
 /* ========== AUTH PAGE ========== */
 .auth-body {
@@ -34,6 +30,7 @@ body {
   border-radius: 14px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.25);
   animation: fadeIn 0.5s ease;
+  backdrop-filter: blur(6px);
 }
 
 .logo {
@@ -96,9 +93,6 @@ body {
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
-}
-
-.auth-form button {
   transition: all 0.25s ease;
 }
 
@@ -111,19 +105,38 @@ body {
   display: none;
 }
 
-/* ========== DASHBOARD ========== */
-header {
+/* ========== DASHBOARD HEADER ========== */
+.dashboard-header {
   background: #ffffff;
-  padding: 15px 25px;
+  padding: 14px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-header h2 {
+.dashboard-header h2 {
   color: #203a43;
 }
 
+/* Right-side actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Theme toggle */
+.theme-toggle {
+  background: #eef2ff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Logout */
 .logout {
   background: crimson;
   color: white;
@@ -133,7 +146,15 @@ header h2 {
   cursor: pointer;
 }
 
-/* Skills Box */
+.logout:hover {
+  background: #b11226;
+}
+
+.theme-toggle:hover {
+  background: #dbe2ff;
+}
+
+/* ========== SKILLS BOX ========== */
 .skills-box {
   padding: 25px;
   background: #f5f7fb;
@@ -149,7 +170,7 @@ header h2 {
   border: 1px solid #ccc;
 }
 
-/* Jobs Grid */
+/* ========== JOBS GRID ========== */
 .jobs-container {
   padding: 30px;
   display: grid;
@@ -162,6 +183,12 @@ header h2 {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 .job-card h3 {
@@ -174,7 +201,6 @@ header h2 {
   color: green;
 }
 
-/* Explanation */
 .explanation {
   font-size: 13px;
   color: #555;
@@ -184,15 +210,62 @@ header h2 {
   border-radius: 5px;
 }
 
-/* ========== ANIMATION ========== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+/* ========== INPUT FOCUS ========== */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #203a43;
+  box-shadow: 0 0 0 2px rgba(32,58,67,0.2);
+}
+
+/* ========== LOADER ========== */
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  border: 5px solid #ccc;
+  border-top: 5px solid #203a43;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 1s linear infinite;
+  z-index: 9999;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg) translate(-50%, -50%); }
+}
+
+/* ========== DARK MODE ========== */
+body.dark {
+  background: #121212;
+  color: #eee;
+}
+
+body.dark .auth-card,
+body.dark .dashboard-header,
+body.dark .job-card,
+body.dark .skills-box {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+body.dark input,
+body.dark textarea {
+  background: #2a2a2a;
+  color: #fff;
+  border-color: #444;
+}
+
+body.dark .theme-toggle {
+  background: #333;
+  color: #fff;
 }
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
-  header {
+  .dashboard-header {
     flex-direction: column;
     gap: 10px;
     text-align: center;
@@ -212,92 +285,4 @@ header h2 {
   .job-card {
     padding: 15px;
   }
-
-  button {
-    font-size: 15px;
-  }
-}
-
-.auth-card {
-  backdrop-filter: blur(6px);
-}
-
-.job-card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.job-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: #203a43;
-  box-shadow: 0 0 0 2px rgba(32,58,67,0.2);
-}
-
-/* ===== LOADING SPINNER ===== */
-.loader {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 48px;
-  height: 48px;
-  border: 5px solid #ccc;
-  border-top: 5px solid #203a43;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  animation: spin 1s linear infinite;
-  z-index: 9999;
-  pointer-events: none;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg) translate(-50%, -50%); }
-}
-
-
-@media (max-width: 768px) {
-  body {
-    background-position: center top;
-  }
-}
-
-/* ===== THEME TOGGLE ===== */
-.theme-toggle {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-/* ===== DARK MODE ===== */
-body.dark {
-  background: #121212;
-  color: #eee;
-}
-
-body.dark .auth-card,
-body.dark header,
-body.dark .job-card,
-body.dark .skills-box {
-  background: #1e1e1e;
-  color: #eee;
-}
-
-body.dark input,
-body.dark textarea {
-  background: #2a2a2a;
-  color: #fff;
-  border-color: #444;
-}
-
-body.dark button {
-  background: #333;
-  color: #fff;
 }
