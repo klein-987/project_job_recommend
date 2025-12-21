@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from db import get_connection
+from backend.db import get_connection
 
 # Load jobs from CSV into database
 def load_jobs_from_csv():
