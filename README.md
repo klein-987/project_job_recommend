@@ -22,6 +22,7 @@ The goal was not just model accuracy, but **end-to-end system design**:
 - 📊 Explainable recommendations (matched skills + similarity score)
 - 💾 SQL database for users and jobs
 - 🌐 RESTful API backend
+- 📱 Mobile-responsive frontend
 - ☁️ Fully deployed (Frontend + Backend)
 
 ## 🧠 Machine Learning Approach
