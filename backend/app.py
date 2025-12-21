@@ -3,7 +3,7 @@ from flask_cors import CORS
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from backend.db import init_db, get_connection
-from recommender import recommend_jobs, load_jobs_from_csv
+from backend.recommender import recommend_jobs, load_jobs_from_csv
 
 app = Flask(__name__)
 CORS(app)
