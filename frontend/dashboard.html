@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Job Recommendation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>Job Recommendations</h2>
+    <button class="btn logout" onclick="logout()">Logout</button>
+</header>
+
+<section class="skills-box">
+    <textarea id="skills" placeholder="Enter your skills (e.g. python sql ml)"></textarea>
+    <button class="btn primary" onclick="getJobs()">Get Recommendations</button>
+</section>
+
+<section class="jobs-container" id="results">
+    <!-- Job cards appear here -->
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

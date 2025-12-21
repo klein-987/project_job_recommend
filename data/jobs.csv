@@ -1,0 +1,11 @@
+job_id,title,company,location,skills
+1,Data Analyst,Infosys,Bangalore,python sql excel statistics
+2,Machine Learning Engineer,TCS,Hyderabad,python machine learning sklearn pandas
+3,Web Developer,Wipro,Remote,html css javascript react
+4,Backend Developer,Accenture,Chennai,python flask sql api
+5,Software Engineer,Google,Bangalore,data structures algorithms c++
+6,AI Engineer,Amazon,Bangalore,python deep learning tensorflow
+7,Cloud Engineer,Microsoft,Hyderabad,aws azure linux networking
+8,DevOps Engineer,IBM,Pune,linux docker kubernetes ci cd
+9,Data Scientist,Flipkart,Bangalore,python statistics machine learning pandas
+10,Full Stack Developer,Zoho,Chennai,html css javascript python flask
