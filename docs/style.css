@@ -1,177 +1,303 @@
+/* ========== GLOBAL RESET ========== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body {
-    min-height: 100vh;
-    background: 
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url("img.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
+  min-height: 100vh;
+  background: 
+    linear-gradient(
+      rgba(15, 32, 39, 0.75),
+      rgba(15, 32, 39, 0.75)
+    ),
+    url("img.png") no-repeat center center;
+  background-size: cover;
+  color: #333;
 }
 
 
-
-/* ===== LOGIN PAGE ===== */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+/* ========== AUTH PAGE ========== */
+.auth-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-h1 {
-    color: #fff;
-    margin-bottom: 8px;
+.auth-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 380px;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  animation: fadeIn 0.5s ease;
 }
 
-.subtitle {
-    color: #ddd;
-    margin-bottom: 25px;
+.logo {
+  text-align: center;
+  color: #203a43;
+  margin-bottom: 20px;
 }
 
-.card {
-    background: #fff;
-    padding: 30px;
-    width: 330px;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+/* Tabs */
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
 }
 
-.card input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.tab {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  background: #eee;
+  font-weight: 600;
+  border-radius: 8px 8px 0 0;
 }
 
-.btn {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-bottom: 10px;
+.tab.active {
+  background: #203a43;
+  color: #fff;
 }
 
-.primary {
-    background: #667eea;
-    color: white;
+/* Forms */
+.auth-form {
+  display: flex;
+  flex-direction: column;
 }
 
-.secondary {
-    background: #eee;
+.auth-form h2 {
+  margin-bottom: 6px;
+  color: #222;
 }
 
-.primary:hover {
-    background: #556cd6;
+.sub {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
 }
 
-#message {
-    margin-top: 10px;
-    text-align: center;
-    font-size: 14px;
+.auth-form input {
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
 }
 
-/* ===== DASHBOARD ===== */
+.auth-form button {
+  padding: 12px;
+  background: #203a43;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.auth-form button {
+  transition: all 0.25s ease;
+}
+
+.auth-form button:hover {
+  background: #162d34;
+  transform: translateY(-1px);
+}
+
+.hidden {
+  display: none;
+}
+
+/* ========== DASHBOARD ========== */
 header {
-    background: white;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background: #ffffff;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.skills-box {
-    padding: 25px;
-    background: #f9f9f9;
-    text-align: center;
-}
-
-.skills-box textarea {
-    width: 60%;
-    height: 80px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.jobs-container {
-    padding: 30px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.job-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-}
-
-.job-card h3 {
-    color: #667eea;
-}
-
-.score {
-    font-weight: bold;
-    color: green;
+header h2 {
+  color: #203a43;
 }
 
 .logout {
-    background: crimson;
-    color: white;
-    padding: 8px 15px;
+  background: crimson;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
 }
 
-/* ===== EXPLANATION TEXT ===== */
+/* Skills Box */
+.skills-box {
+  padding: 25px;
+  background: #f5f7fb;
+  text-align: center;
+}
+
+.skills-box textarea {
+  width: 100%;
+  max-width: 600px;
+  height: 90px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Jobs Grid */
+.jobs-container {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.job-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.job-card h3 {
+  color: #203a43;
+  margin-bottom: 6px;
+}
+
+.score {
+  font-weight: bold;
+  color: green;
+}
+
+/* Explanation */
 .explanation {
-    font-size: 13px;
-    color: #555;
-    margin-top: 8px;
-    background: #f2f4ff;
-    padding: 6px;
-    border-radius: 5px;
+  font-size: 13px;
+  color: #555;
+  margin-top: 8px;
+  background: #eef2ff;
+  padding: 6px;
+  border-radius: 5px;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 768px) {
-    .skills-box textarea {
-        width: 90%;
-    }
+/* ========== ANIMATION ========== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    header {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .jobs-container {
+    padding: 20px;
+  }
 }
 
 @media (max-width: 480px) {
-    .card {
-        width: 90%;
-    }
+  .auth-card {
+    margin: 10px;
+    padding: 20px;
+  }
 
-    .jobs-container {
-        padding: 15px;
-    }
+  .job-card {
+    padding: 15px;
+  }
 
-    .job-card {
-        padding: 15px;
-    }
-
-    .btn {
-        font-size: 14px;
-    }
+  button {
+    font-size: 15px;
+  }
 }
 
+.auth-card {
+  backdrop-filter: blur(6px);
+}
+
+.job-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #203a43;
+  box-shadow: 0 0 0 2px rgba(32,58,67,0.2);
+}
+
+/* ===== LOADING SPINNER ===== */
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  border: 5px solid #ccc;
+  border-top: 5px solid #203a43;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 1s linear infinite;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg) translate(-50%, -50%); }
+}
+
+
+@media (max-width: 768px) {
+  body {
+    background-position: center top;
+  }
+}
+
+/* ===== THEME TOGGLE ===== */
+.theme-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ===== DARK MODE ===== */
+body.dark {
+  background: #121212;
+  color: #eee;
+}
+
+body.dark .auth-card,
+body.dark header,
+body.dark .job-card,
+body.dark .skills-box {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+body.dark input,
+body.dark textarea {
+  background: #2a2a2a;
+  color: #fff;
+  border-color: #444;
+}
+
+body.dark button {
+  background: #333;
+  color: #fff;
+}
