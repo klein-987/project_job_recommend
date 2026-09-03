@@ -175,10 +175,9 @@ Differences between local and production environments
 Constraints of static frontend hosting (GitHub Pages)
 
 ## 👨‍💻 Author                     
-  Neppali Puneeth Kumar                       
-  B.Tech CSE, IIITDM Kancheepuram (2024–2028)   
-  🔗**LinkedIn**: https://www.linkedin.com/in/neppali-puneeth-kumar-824170327/
-
+  Yarragunta venkata kartheek
+  B Tech CSE Sastra university(2024-2028)
+  Linkedin:https://www.linkedin.com/in/kartheek-yarragunta-14b767432/
 
 
 
