@@ -3,7 +3,7 @@
 A full-stack **Job Recommendation System** that matches user skills with relevant job roles using **NLP-based similarity matching**.  
 This project demonstrates **machine learning fundamentals, backend engineering, database design, and real-world deployment**.
 
-🔗 **Live Demo:** https://n-puneeth.github.io/Job_Recommender/index.html  
+🔗 **Live Demo:** https://klein-987.github.io/project_job_recommend/ 
 🔗 **Backend API:** https://job-recommender-backend-ez6u.onrender.com  
 
 ## 📌 Motivation
@@ -113,8 +113,8 @@ Job_Recommender/
 Follow these steps to run the project locally.
 
 1️⃣ Clone the repository
-git clone https://github.com/N-Puneeth/Job_Recommender.git
-cd Job_Recommender
+git clone https://github.com/klein-987/project_job_recommend.git
+cd project_job_recommend
 
 2️⃣ Create and activate a virtual environment
 python -m venv venv
