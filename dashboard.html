@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Job Recommendation</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<div id="loader" class="loader hidden"></div>
+<script>
+  const user = localStorage.getItem("username");
+  if (!user) {  
+    window.location.href = "index.html";
+  }
+</script>
+
+<body>
+
+<header class="dashboard-header">
+  <h2>Job Recommender</h2>
+
+  <div class="header-actions">
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    <button class="logout" onclick="logout()">Logout</button>
+  </div>
+</header>
+
+
+<section class="skills-box">
+    <textarea id="skills" placeholder="Enter your skills (e.g. python sql ml)"></textarea>
+    <button class="btn primary" onclick="getJobs()">Get Recommendations</button>
+</section>
+
+<section class="jobs-container" id="results">
+    <!-- Job cards appear here -->
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
